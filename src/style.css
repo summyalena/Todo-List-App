@@ -1,0 +1,82 @@
+body {
+  background-color: white;
+}
+
+.todo-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-wrapper {
+  width: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.head {
+  border-bottom: 0.5px solid lightgray;
+  display: flex;
+  color: rgb(73, 72, 72);
+  font-weight: 600;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+.refresher {
+  margin-top: 15px;
+}
+
+.AddLists {
+  border-bottom: 0.5px solid lightgray;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.AddLists input {
+  border: none;
+  outline: none;
+  padding: 7px 0;
+  width: 300px;
+  font-style: italic;
+  background-color: transparent;
+}
+
+.fa-solid {
+  color: rgb(112, 111, 111);
+}
+
+.add-to-list {
+  margin-top: 5px;
+}
+
+.list {
+  display: flex;
+  padding: 0 10px;
+  color: rgb(73, 72, 72);
+  justify-content: space-between;
+  border-bottom: 0.5px solid lightgray;
+}
+
+.list-one {
+  display: flex;
+  gap: 2px;
+}
+
+.dots {
+  margin-top: 15px;
+}
+
+.clear {
+  padding: 10px;
+  background-color: rgba(211, 211, 211, 0.336);
+  color: lightslategray;
+  display: flex;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  justify-content: center;
+}

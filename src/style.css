@@ -105,6 +105,10 @@ body {
   display: block;
 }
 
+.check {
+  display: block;
+}
+
 .checked {
   text-decoration: line-through !important;
   font-style: italic !important;

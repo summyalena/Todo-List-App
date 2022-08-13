@@ -55,7 +55,7 @@ body {
 
 .list {
   display: flex;
-  padding: 0 10px;
+  padding: 5px 10px;
   color: rgb(73, 72, 72);
   justify-content: space-between;
   border-bottom: 0.5px solid lightgray;
@@ -63,11 +63,52 @@ body {
 
 .list-one {
   display: flex;
-  gap: 2px;
+  font-family: 'Times New Roman', Times, serif;
+  gap: 9px;
+}
+
+.list-one input {
+  border: none;
+  outline: none;
+  padding: 7px 0;
+  font-size: 15px;
+  background-color: transparent;
+}
+
+.other {
+  display: none;
+}
+
+.one {
+  display: block;
+}
+
+.inputOne {
+  display: block;
+  background-color: yellow;
+}
+
+.happy {
+  /* display: none; */
+  margin-top: 2px;
 }
 
 .dots {
   margin-top: 15px;
+}
+
+.dots-two {
+  display: none;
+}
+
+.dots.on {
+  display: block;
+}
+
+.checked {
+  text-decoration: line-through !important;
+  font-style: italic !important;
+  color: rgba(226, 226, 226, 0.801) !important;
 }
 
 .clear {

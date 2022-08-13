@@ -1,5 +1,5 @@
 import './style.css';
 
-import * as create from './create';
+import create from './create';
 
 create();

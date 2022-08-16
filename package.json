@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/summyalena/Todo-List-App/issues"
   },
-  "homepage": "https://github.com/summyalena/Todo-List-App",
+  "homepage": "https://summyalena.github.io/Todo-List-App/",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",

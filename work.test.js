@@ -40,4 +40,13 @@ describe('testing for add and remove', () => {
     tasks.pop();
     expect(tasks).toHaveLength(0);
   });
+  it('add list to ui', () => { 
+    const localStorage = new LocalStorageMock(); localStorage.getAll(); 
+    const lists = document.querySelectorAll('.todo-list'); 
+    expect(lists).toHaveLength(1); });
+  it('remove from ui', () => { 
+    const localStorage = new LocalStorageMock(); localStorage.getAll(); 
+    const lists = document.querySelectorAll('.todo-list'); 
+    expect(lists).toHaveLength(1); 
+}); 
 });

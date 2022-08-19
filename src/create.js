@@ -21,7 +21,7 @@ export default function create() {
   };
 
   const display = () => {
-    todo.innerHTML = '';
+    // todo.innerHTML = '';
     const tasks = JSON.parse(localStorage.getItem('localTasks')) ?? [];
     tasks.forEach((task) => {
       const todo = document.querySelector('.todo-list');

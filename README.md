@@ -28,12 +28,20 @@ Prerequisites
 ## To run test cases for the Todo-list app
 `npm test`
 
+## Setup
+- `npm install`
+- `npm build`
+- `npm start`
+
+## Run tests 
+- `npm test`
+
 ## Authors
 
 👤 **Author1**
 
 - GitHub: [@summyalena](https://github.com/summyalena)
-
+- GitHub: [@TemesgenA](https://github.com/TemesgenA)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

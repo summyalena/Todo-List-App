@@ -14,11 +14,19 @@ Please click [here](https://summyalena.github.io/Todo-List-App/) to see the live
 ## Getting Started
 To get a local copy and running follow these simple example steps.
 Prerequisites
-Setup
-Install
-Usage
-Run tests
-Deployment
+- Setup
+- Install
+- Usage
+- Run tests
+- Deployment
+
+## Setup 
+- `npm install`
+- `npm run`
+- `npm build`
+
+## To run test cases for the Todo-list app
+`npm test`
 
 ## Authors
 

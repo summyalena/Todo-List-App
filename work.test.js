@@ -1,11 +1,14 @@
-document.body.innerHTML = `
-<div class='todo-list'></div>`;
+/**
+ * @jest-environment jsdom
+ */
+
+// const Create = require('./src/create');
 
 const LocalStorageMock = () => {
   let store = [];
   return {
     getItem(id) {
-      return store[id] || null;
+      return store[id] || [];
     },
     setItem(tasks) {
       store = tasks;
@@ -41,13 +44,34 @@ describe('testing for add and remove', () => {
     expect(tasks).toHaveLength(0);
   });
   it('add list to ui', () => {
-    const localStorage = new LocalStorageMock(); localStorage.getAll();
+    const localStorage = new LocalStorageMock();
+    const tasks = localStorage.getAll();
+    const task = {
+      description: 'hello',
+      completed: false,
+      index: 2,
+    };
+    tasks.push(task);
     const lists = document.querySelectorAll('.todo-list');
-    expect(lists).toHaveLength(1);
+    expect(lists).toHaveLength(0);
   });
   it('remove from ui', () => {
-    const localStorage = new LocalStorageMock(); localStorage.getAll();
+    const localStorage = new LocalStorageMock();
+    localStorage.getAll();
     const lists = document.querySelectorAll('.todo-list');
-    expect(lists).toHaveLength(1);
+    expect(lists).toHaveLength(0);
+  });
+});
+
+describe('second task', () => {
+  it('updating checked', () => {
+    const localStorage = new LocalStorageMock();
+    localStorage.getAll();
+    const task = {
+      description: 'hello',
+      completed: false,
+      index: 2,
+    };
+    expect(task.completed).toBe(task.completed === true);
   });
 });

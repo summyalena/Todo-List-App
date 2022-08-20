@@ -38,10 +38,15 @@ Prerequisites
 
 ## Authors
 
-👤 **Author1**
+👤 **Assumpta Okolike**
 
 - GitHub: [@summyalena](https://github.com/summyalena)
+
+
+👤 **Temesgen Ayneka**
+
 - GitHub: [@TemesgenA](https://github.com/TemesgenA)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

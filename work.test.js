@@ -2,8 +2,6 @@
  * @jest-environment jsdom
  */
 
-// const Create = require('./src/create');
-
 const LocalStorageMock = () => {
   let store = [];
   return {

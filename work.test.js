@@ -72,4 +72,10 @@ describe('second task', () => {
     };
     expect(task.completed).toBe(task.completed === true);
   });
+  it('check for clear all completed', () => {
+    const localStorage = new LocalStorageMock();
+    const tasks = localStorage.getItem();
+    const tsk = tasks.filter((task) => !task.completed);
+    expect(tsk).toHaveLength(0);
+  });
 });

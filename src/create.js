@@ -3,13 +3,14 @@ import Clear from './module/clear';
 
 export default function create() {
   const addListInput = document.querySelector('.add');
-  const AddToList = document.querySelector('.add-to-list');
+  const addToList = document.querySelector('.add-to-list');
   const todo = document.querySelector('.todo-list');
   const todoContainer = document.querySelector('.todo-wrapper');
   const clear = document.querySelector('#clearAll');
 
+  const tasks = JSON.parse(localStorage.getItem('localTasks')) || [];
+
   const addList = () => {
-    const tasks = JSON.parse(localStorage.getItem('localTasks')) || [];
     const objectTasks = {
       description: addListInput.value,
       completed: false,
@@ -22,7 +23,6 @@ export default function create() {
 
   const display = () => {
     todo.innerHTML = '';
-    const tasks = JSON.parse(localStorage.getItem('localTasks')) ?? [];
     tasks.forEach((task) => {
       const todo = document.querySelector('.todo-list');
       const list = document.createElement('div');
@@ -48,7 +48,7 @@ export default function create() {
   };
   display();
 
-  AddToList.addEventListener('click', () => {
+  addToList.addEventListener('click', () => {
     if (addListInput.value === '') return;
     addList(addListInput.value);
     addListInput.value = '';
@@ -56,7 +56,6 @@ export default function create() {
   });
 
   const removeList = (id) => {
-    const tasks = JSON.parse(localStorage.getItem('localTasks')) ?? [];
     const filteredLists = tasks.filter((task) => task.index !== parseInt(id, 10));
     tasks.length = 0;
     let i = 0;
@@ -91,19 +90,19 @@ export default function create() {
   });
 
   const clearAll = () => {
-    const List = document.querySelectorAll('.list');
-    List.forEach((list) => {
+    const lists = document.querySelectorAll('.list');
+    lists.forEach((list) => {
       list.remove();
     });
     document.querySelector('.clear').getElementsByClassName.display = 'none';
   };
+
   clear.addEventListener('click', () => {
     clearAll();
     Clear.clearLocal();
   });
 
   const clearAllChecked = () => {
-    const tasks = JSON.parse(localStorage.getItem('localTasks')) ?? [];
     let checkedLists = tasks.filter((task) => !task.completed);
     // eslint-disable-next-line no-plusplus
     checkedLists = checkedLists.map((list, idx) => ({ ...list, index: idx++ }));
